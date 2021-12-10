@@ -114,13 +114,3 @@ output "master_password" {
   value       = random_password.mq_admin_password[0].result
   sensitive   = true
 }
-
-output "ssm_parameter_mq_application_username_name" {
-  description = "ARN for the SSM parameter for the MQ username."
-  value       = aws_ssm_parameter.mq_application_username.name
-}
-
-output "ssm_parameter_mq_application_password_name" {
-  description = "ARN for the SSM parameter for the MQ password."
-  value       = aws_ssm_parameter.mq_application_password.name
-}
