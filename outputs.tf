@@ -102,3 +102,9 @@ output "application_username" {
   value       = local.mq_application_user
   description = "AmazonMQ application username"
 }
+
+output "master_password" {
+  description = "Password for master. Sensitive!"
+  value       = random_password.mq_admin_password.result
+  sensitive   = true
+}
