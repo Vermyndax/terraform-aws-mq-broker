@@ -105,7 +105,6 @@ output "application_username" {
 
 output "master_password" {
   description = "Password for master. Sensitive!"
-  count       = local.enabled && !local.mq_application_password_is_set ? 1 : 0
   value       = random_password.mq_admin_password[0].result
   sensitive   = true
 }
